@@ -10,10 +10,8 @@ public class App {
         double x;
         double y;
         double resultado = 0.0;
-        int opcao = 0;
         String operacao;
 
-        // FIXME: loop do while
         do {
             // menu (gui)
             System.out.println("======================");
@@ -29,11 +27,14 @@ public class App {
             operacao = leia.nextLine();
 
             // imputs
-            if (operacao != "7") {
+            if (!operacao.equals("7")) {
                 System.out.println("Informe o valor do primeiro número (X): ");
                 x = leia.nextDouble();
                 System.out.println("Informe o valor do segundo número (Y): ");
                 y = leia.nextDouble();
+
+                // limpeza de buffer
+                leia.nextLine();
 
                 switch (operacao) {
                     case "1":
@@ -66,13 +67,8 @@ public class App {
                 // mostrar o resultado
                 System.out.println("Resultado: " + resultado);
             }
-            else {
-                opcao = Integer.parseInt(operacao);
-            }
 
-            // limpeza de buffer
-            leia.nextLine();
-        } while(opcao != 7);
+        } while(!operacao.equals("7"));
 
         // fecha objeto leia
         leia.close();
