@@ -1,0 +1,86 @@
+package com.atividade04.app;
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        // atividade 4
+        /*
+         * Crie um programa que receba do usuário: o nome e a idade.
+         * Depois, exiba um menu com 5 filmes, suas respectivas salas de cinema e suas respectivas classificações indicativas.
+         * O usuário deve escolher o filme, e se caso ele tiver a idade mínima para ver o filme, o programa imprime o ingreso e encerra. Caso o usuário não otenha a idade mínima, o programa bloqueia a entrada do usuário e exibe novamente os filmes.
+         * Filmes em cartaz:
+         * - Sala 1 - A Roda Quadrada - Livre
+         * - Sala 2 - A Volta Dos Que Não Foram - 12 anos
+         * - Sala 3 - Poeira em Alto Mar - 14 anos
+         * - Sala 4 - As Tranças do Rei Careca - 16 anos
+         * - Sala 5 - A Vingança do Peixe Frito - 18 anos
+         */
+
+        // scanner
+        Scanner leia = new Scanner(System.in);
+
+        // declaracao das variaveis
+        String[] salas = new String[5];
+        String nome;
+        String sala;
+        int idade;
+        int idadeMinima = 0;
+
+        // inicializar o array
+        salas[0] = "Halloween";
+        salas[1] = "O Segredo da Cabana";
+        salas[2] = "Tudo em Todo Lugar ao Mesmo Tempo";
+        salas[3] = "Carros 2";
+        salas[4] = "Toy Story";
+
+        // recebendo os dados
+        System.out.println("Digite o seu nome: ");
+        nome = leia.nextLine();
+        System.out.println("Digite a sua idade: ");
+        idade = leia.nextInt();
+
+        // limpeza de buffer
+        leia.nextLine();
+
+        // laço de repetição para repetir o filme
+        do {
+
+            // menu
+        System.out.println("==================");
+        System.out.println("BritoMark - Filmes em cartaz!");
+        System.out.println("Sala 1 - " + salas[0] + " - 18 anos");
+        System.out.println("Sala 2 - " + salas[1] + " - 16 anos");
+        System.out.println("Sala 3 - " + salas[2] + " - 14 anos");
+        System.out.println("Sala 4 - " + salas[3] + " - 12 anos");
+        System.out.println("Sala 5 - " + salas[4] + " - Livre");
+        System.out.println("Informe a sala desejada: ");
+        sala = leia.nextLine();
+
+        // TODO : verificar se o programa está certo
+        // escolha do filme
+        switch (sala){
+            case "1":
+            System.out.println("Ingresso: " + salas[0] + "para " + nome);
+
+            case"2":
+            System.out.println("Ingresso: " + salas[1] + "para " + nome);
+
+            case"3":
+            System.out.println("Ingresso: " + salas[2] + "para " + nome);
+
+            case"4":
+            System.out.println("Ingresso: " + salas[3] + "para " + nome);
+
+            case"5":
+            System.out.println("Ingresso: " + salas[4] + "para " + nome);
+
+            default:
+            System.out.println("Insira um número válido!");
+        }
+
+        } while(idade < idadeMinima);
+
+        // fecha o objeto leia
+        leia.close();
+    }
+}

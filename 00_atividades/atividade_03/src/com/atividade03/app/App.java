@@ -18,6 +18,7 @@ public class App {
 
         // variáveis
         String nome;
+        String resultado;
         double peso;
         double altura;
         double imc;
@@ -33,10 +34,11 @@ public class App {
         // calculo do imc
 
         imc = peso / Math.pow(altura,2);
-        System.out.println("O seu imc será de: " + imc);
+        System.out.println("O seu imc será de: " + String.format("%.2f", imc));
 
         // diagnóstico
 
+        /*
         if (imc < 18.5){
             System.out.println("O diagnóstico de" + nome + " é de um intervalo ABAIXO do peso.");
         }
@@ -47,6 +49,18 @@ public class App {
         else if(imc > 25){
             System.out.println("O diagnóstico de " + nome + " é de um intervalo de SOBREPESO.");
         }
+            */
+
+        // refazendo e complementando o if else com TERNARIO (adição da variável resultado)
+        resultado = (imc < 18.5) ? nome + " está abaixo do peso." :
+        (imc < 25) ? nome + " está no peso ideal." :
+        (imc < 30) ? nome + " está acima do peso." :
+        (imc < 35) ? nome + " está obeso." :
+        (imc < 40) ? nome + " está com obesidade nível 2." :
+        "está com obesidade mórbida.";
+
+        // exibe o resultado
+        System.out.println(resultado);
 
         // fecha o objeto leia
         leia.close();
