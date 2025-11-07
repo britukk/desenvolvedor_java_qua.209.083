@@ -1,11 +1,76 @@
 package com.heranca.app;
 
+// classe Java importada
+import java.util.Scanner;
+
+// classes criadas por mim
 import com.heranca.models.PessoaFisica;
 import com.heranca.models.PessoaJuridica;
 
 public class App {
     public static void main(String[] args) throws Exception {
+
+        // instancias
+        Scanner leia = new Scanner(System.in);
+
+        PessoaFisica usuario = new PessoaFisica(
+            null,
+            null,
+            null,
+            null,
+            0
+        );
+
+        PessoaJuridica empresa = new PessoaJuridica (
+            null,
+            null,
+            null,
+            null,
+            null
+        );
+
+        // entrada de dados (usuario)
+        System.out.println("Informe os dados do usuário: \n");
+        System.out.println("Informe o nome: ");
+        usuario.nome = leia.nextLine();
+        System.out.println("Informe o CPF: ");
+        usuario.cpf = leia.nextLine();
+        System.out.println("Informe o e-mail: ");
+        usuario.email = leia.nextLine();
+        System.out.println("Informe o telefone: ");
+        usuario.telefone = leia.nextLine();
+        System.out.println("Informe a sua idade: ");
+        usuario.idade = leia.nextInt();
+
+        // limpeza de buffer
+        leia.nextLine();
+
+        // entrada de dados(empresa)
+        System.out.println("\nInforme os dados da empresa\n");
+        System.out.println("Informe a sua razão social: ");
+        empresa.razaoSocial = leia.nextLine();
+        System.out.println("Informe o nome fantasia: ");
+        empresa.nomeFantasia = leia.nextLine();
+        System.out.println("Informe o seu CNPJ: ");
+        empresa.cnpj = leia.nextLine();
+        System.out.println("Informe o e-mail: ");
+        empresa.email = leia.nextLine();
+        System.out.println("Informe o telefone: ");
+        empresa.telefone = leia.nextLine();
+
+        // saída de dados (usuario)
+        System.out.println("\n----DADOS DO USUÁRIO----\n");
+        usuario.exibirDados();
+        System.out.println("\n----DADOS DA EMPRESA----\n");
+        empresa.exibirDados();
+
+
+        // fecha o objeto leia
+        leia.close();
+
+        /*  CODIGO ANTIGO (TROCAMOS)
         PessoaFisica usuario = new PessoaFisica();
+        PessoaJuridica empresa = new PessoaJuridica();
 
         usuario.nome = "João Pedro";
         usuario.email = "joaopedro@gmail.com";
@@ -13,7 +78,7 @@ public class App {
         usuario.cpf = "746.930.432-54";
         usuario.idade = 20;
 
-        PessoaJuridica empresa = new PessoaJuridica();
+
 
         empresa.razaoSocial = "Brito LTDA";
         empresa.nomeFantasia = "BritoComp Systems";
@@ -34,6 +99,8 @@ public class App {
         System.out.println("CNPJ da Empresa: " + empresa.cnpj);
         System.out.println("E-mail da Empresa: " + empresa.email);
         System.out.println("Telefone da Empresa: " + empresa.telefone);
+
+        */
 
     }
 }
