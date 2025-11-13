@@ -1,17 +1,19 @@
 package com.atividade5.models;
 
 public class Imc {
-
+    // atributos
     private String nome;
     private String resultado;
     private double peso;
     private double altura;
     private double imc;
 
+    // construtor
     public Imc () {
-
+    
     };
 
+    // métodos get e set
     public String getNome() {
         return this.nome;
     }
@@ -37,7 +39,7 @@ public class Imc {
     }
 
     public double getImc() {
-        return (this.imc = this.peso / Math.pow(this.altura, 2));
+        return this.imc;
     }
 
     public void setImc(double imc) {
@@ -52,15 +54,18 @@ public class Imc {
         this.resultado = resultado;
     }
 
-    // output
+    public double calculoImc() {
+        this.imc = this.peso / (Math.pow(this.altura, 2));
+        return this.imc;
+    }
+
+    // métodos do imc
     public String resultadoImc () {
-        return (
-        this.resultado = (this.imc < 18.5) ? nome + " está abaixo do peso e seu imc é " + this.imc + ".":
-        (this.imc < 25) ? nome + " está no peso ideal e seu imc é " + this.imc + ".":
-        (this.imc < 30) ? nome + " está acima do peso e seu imc é " + this.imc + ".":
-        (this.imc < 35) ? nome + " está obeso e seu imc é " + this.imc :
-        (this.imc < 40) ? nome + " está com obesidade nível 2 e seu imc é " + this.imc + ".":
-        "está com obesidade mórbida e seu imc é " + this.imc + "."
-        );
+        return (this.imc <= 18.5) ? " está abaixo do peso":
+        (this.imc <= 25) ? " está no peso ideal":
+        (this.imc <= 30) ? " está acima do peso":
+        (this.imc <= 35) ? " está obeso" :
+        (this.imc <= 40) ? " está com obesidade severa":
+        "está com obesidade mórbida";
     }
 }

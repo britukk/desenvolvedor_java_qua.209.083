@@ -12,8 +12,8 @@ public class App {
         String[] opcoes = {"Valores Corporais", "Sair do programa."};
         Object opcao;
 
+        // laço de repetição
         do {
-            // entrada dos dados
             opcao = JOptionPane.showInputDialog(
                 null,
                 "Selecione uma das opções:",
@@ -23,8 +23,9 @@ public class App {
                 opcoes,
                 opcoes[0]
             );
-
-            if ( opcao != "Sair do programa.") {
+            // verificar a opção do usuário
+            if ( opcao == "Valores Corporais") {
+            // entrada dos dados
                 imc.setNome(
                     JOptionPane.showInputDialog(
                         "Informe o seu nome: "
@@ -49,6 +50,10 @@ public class App {
 
                 JOptionPane.showMessageDialog(
                 null,
+                imc.getNome() + ", seu IMC é: " +
+                String.format("%.2f", imc.calculoImc()) +
+                ".\n" +
+                imc.getNome() +
                 imc.resultadoImc()
                 );
             }
@@ -57,9 +62,9 @@ public class App {
     }
 }
 
-// TODO: atividade 05:
+// atividade 05:
 /*
- * Recrie o programa do IMC, deta vez usando os conceitos de Orientação a Objetos, encapsulamento e
+ * Recrie o programa do IMC, desta vez usando os conceitos de Orientação a Objetos, encapsulamento e
  * Interface Gráfica com JOptionPane.
  * O programa deverá ter a opção de sair.
  * Ao terminar, gere o executável.
