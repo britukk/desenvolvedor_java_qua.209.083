@@ -16,6 +16,7 @@ public class App {
          "Sair do Programa."
         };
         Object opcao;
+        double valor;
 
         // entrada de dados
         cc.setTitular(JOptionPane.showInputDialog(
@@ -25,6 +26,56 @@ public class App {
             "Informe o CPF do titular da conta: "
             ));
 
-            // TODO: Fazer o laço de repetição para terminar o código do banco.
+        // laço de repetição
+        do {
+            opcao = JOptionPane.showInputDialog(
+                null,
+                "Escolha a opção desejada",
+                null,
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                opcoes,
+                opcoes[0]
+            );
+
+            if(opcao == "Consultar Dados") {
+                JOptionPane.showMessageDialog(null, cc.consultarDados());
+            }
+
+            else if(opcao == "Depositar") {
+                valor = Double.parseDouble(
+                JOptionPane.showInputDialog(
+                    "Informe o valor a ser depositado em R$: "
+                    ).replace(",",".")
+                );
+                JOptionPane.showMessageDialog(
+                    null, 
+                    "Depósito efetuado com sucesso." + 
+                    "\nValor do depósito: R$ " + 
+                    String.format("%.2f", cc.depositar(valor))
+                );
+            }
+
+            else if(opcao == "Sacar") {
+                valor = Double.parseDouble(JOptionPane.showInputDialog(
+                    "Informe o valor do saque em R$: ").replace(",", "."));
+                    if(cc.getSaldo() >= valor) {
+                        JOptionPane.showMessageDialog(null,
+                        "Saque efetuado com sucesso." +
+                        "\nValor do saldo: R$ " +
+                        String.format("%.2f", cc.sacar(valor))
+                        );
+                    }
+                    else {
+                        JOptionPane.showMessageDialog(
+                        null,
+                        "Saldo insuficiente." +
+                        "\nSaldo atual: R$ " +
+                        String.format("%.2f", cc.getSaldo())
+                        );
+                    }
+            }
+
+        } while( opcao != "Sair do Programa.");
     }
 }
