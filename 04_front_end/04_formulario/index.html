@@ -1,0 +1,75 @@
+<!-- parte mais importante -> única parte em que o HTML tem entrada de dados, ao invés de saída de dados. -->
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+
+    <meta name="author" content="Brito">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Formulário
+    </title>
+
+ </head>
+
+ <body>
+
+    <h1>
+        Formulário HTML
+    </h1>
+    <hr>
+
+    <!-- fomulário -->
+    <form>
+        <!-- PLACEHOLDER - Texto que aparece atrás do botão para digitar
+
+        REQUIRED - Mesma coisa do que o NOT NULL do banco de dados, ou seja, é obrigatório para o cadastro -->
+
+        <label>Nome:</label><br>
+        <input type="text" maxlength="20" placeholder="Digite até 20 caracteres" value="Fulano" required><br><br>
+
+        <label>Idade:</label><br>
+        <input type="number" value="18" min="12" max="65"><br><br>
+
+        <label>Peso</label><br>
+        <input type="number" value="20" step="0.5"><br><br>
+
+        <label>Data de Nascimento:</label>
+        <input type="date"><br><br>
+
+        <label>E-mail</label><br>
+        <input type="email" placeholder="usuario@servidor.com"><br><br>
+
+        <label>Senha</label><br>
+        <input type="password" placeholder="Informe a Senha"><br><br>
+
+        <label>Escolaridade</label><br>
+        <select>
+            <option>
+                Escolha uma opção...
+            </option>
+            <option>Ensino Fundamental Incompleto</option>
+            <option>Ensino Fundamental Completo</option>
+            <option>Ensino Medio Incompleto</option>
+            <option>Ensino Médio Completo</option>
+            <option>Ensino Superior Incompleto</option>
+            <option>Ensino Superior Completo</option>
+            <option>Pós-Graduação</option>
+            <option>Mestrado</option>
+            <option>Doutorado</option>
+        </select><br><br>
+
+        <label>Sexualidade</label><br>
+        <select>
+            <option>
+                Escolha uma opção...
+            </option>
+            <option>Masculino</option>
+            <option>Feminino</option>
+            <option>Outro</option>
+            <option>Prefiro não Informar</option>
+        </select><br><br>
+    </form>
+ </body>
+
+ </html>
