@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta name="author" content="Brito">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 06</title>
+</head>
+<body>
+    <!-- TODO: atividade 06:
+     Crie um formulário de cadastro com os seguintes campos:
+     - Nome completo
+     - Data de nascimento
+     - E-mail
+     - CPF
+     - Telefone
+     - Gênero
+     - Altura
+     - Escolaridade
+     - Profissão
+     - Salário
+     - Endereço: CPF, UF, Cidade, Bairro, Logradouro, Complemento, Número -->
+
+     <h1>
+        Formulário para Cadastro
+    </h1>
+    <hr>
+
+    <!-- formulario -->
+    <form>
+        <label>Nome Completo:</label><br>
+        <input type="text" maxlength="40" placeholder="Digite o seu Nome" style="width:230px" required><br><br>
+
+        <label>Data de Nascimento:</label><br>
+        <input type="date"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" maxlength="30" placeholder="usuario@servidor.com"><br><br>
+
+        <label>CPF:</label><br>
+        <input type="text" maxlength="14" placeholder="000.000.000-00"><br><br>
+
+        <label>Telefone:</label><br>
+        <input type="text" maxlength="18" value="+55 ()"><br><br>
+
+        <label>Gênero:</label><br>
+        <select>
+            <option>
+                Selecione uma das opções:
+            </option>
+            <option>
+                Masculino
+            </option>
+            <option>
+                Feminino
+            </option>
+            <option>
+                Outro
+            </option>
+            <option>
+                Prefiro não informar
+            </option>
+        </select><br><br>
+
+        <label>Altura:</label><br>
+        <input type="number" step="0.05" value="1.70" style="width:60px"><br><br>
+
+        <label>Escolaridade:</label><br>
+        <select>
+            <option>
+                Selecione uma das opções:
+            </option>
+            <option>Ensino Fundamental incompleto</option>
+            <option>Ensino Fundamental completo</option>
+            <option>Ensino Médio incompleto</option>
+            <option>Ensino Médio completo</option>
+            <option>Ensino Superior incompleto</option>
+            <option>Ensino Superior completo</option>
+            <option>Pós-Graduação</option>
+            <option>Mestrado</option>
+            <option>Doutorado</option>
+        </select><br><br>
+
+        <label>Profissão:</label><br>
+        <select>
+            <option>
+                Selecione uma das opções:
+            </option>
+            <option>Professor</option>
+            <option>Engenheiro</option>
+            <option>Médico</option>
+            <option>Enfermeiro</option>
+            <option>Dentista</option>
+            <option>Psicólogo</option>
+            <option>Bombeiro</option>
+            <option>Policial</option>
+            <option>Outro...</option>
+        </select><br><br>
+
+        <label>Salário:</label><br>
+        <input type="number" value="0.0" step="250"><br><br>
+
+        <h2>Endereço</h2><hr>
+        <label>CEP:</label><br>
+        <input type="text" maxlength="10" placeholder="Informe seu CEP"><br><br>
+
+        <label>Estado:</label><br>
+        <input type="text"><br><br>
+
+        <label>Cidade:</label><br>
+        <input type="text" style="width:800px"><br><br>
+
+        <label>Bairro:</label><br>
+        <input type="text" style="width:800px"><br><br>
+
+        <label>Complemento:</label><br>
+        <input type="text" style="width:800px"><br><br>
+
+        <label>Número:</label><br>
+        <input type="text" style="width:50px"><br><br>
+
+        <label>Deseja recomeçar o formulário?</label><br>
+        <button type="reset">Limpar</button><br><br>
+
+        <label>Terminou?</label><br>
+        <button type="submit">Cadastrar-se</button><br><br>
+    </form>
+    
+</body>
+</html>
