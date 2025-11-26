@@ -1,0 +1,117 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+main {
+    margin: 30px 100px;
+}
+
+form {
+    margin: 50px 15px;
+}
+
+/* parte responsável pelos parágrafos, espaço para baixo */
+label, button {
+    display: block;
+}
+
+label {
+    margin: 4px 4px;
+}
+
+button {
+    margin: 50px 30px;
+    font-size: 17px;
+    font-weight: bolder;
+    padding: 5px 10px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: #ff9900;
+    color: rgb(248, 255, 248);
+    transition: 1s ease;
+}
+
+input, select {
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ff9900;
+    transition: 1.3s ease;
+}
+
+select {
+    background-color: #FFFFFF;
+}
+
+h1 {
+    color:#ff9900;
+    text-shadow: 0px 0px 3px #16161d;
+}
+
+input:focus, select:focus {
+    border-bottom: 2px solid #0000bd;
+    transition: 1.3s ease;
+}
+
+button:hover {
+    background-color: #FFFFFF;
+    color:#ff9900;
+    transition: 1s ease;
+}
+
+.nome {
+    width: 500px;
+}
+
+.data-nascimento {
+    width: 100px;
+}
+
+.altura {
+    width: 45px;
+}
+
+.peso {
+    width: 45px;
+}
+
+.genero {
+    width: 175px;
+}
+
+.cpf {
+    width: 120px;
+}
+
+.cep {
+    width: 90px;
+}
+
+.email {
+    width: 250px;
+}
+
+.mae {
+    width: 500px;
+}
+
+.pai {
+    width: 500px;
+}
+
+.escolaridade {
+    width: 215px;
+}
+
+.estado-civil {
+    width: 150px;
+}
+
+.github {
+    width: 300px;
+}
+
+.linkedin {
+    width: 300px;
+}
