@@ -52,7 +52,9 @@
 
     <main class="container">
         <h1>Cadastro</h1>
+        <h3 class="mt-5">Dados do usuário</h3>
         <hr>
+        <!-- formulário -->
         <form class="mt-5">
             <div class="row">
                 <!-- nome -->
@@ -89,7 +91,97 @@
                         <option value="4">Prefiro não informar</option>
                     </select>
                 </div>
+                <!-- e-mail -->
+                <div class="col-12 col-md-6 col-lg-9 mb-3">
+                    <label class="form-label">Email:</label>
+                    <input class="form-control" type="email" placeholder="usuario@servidor.com"
+                        aria-label="default input example">
+                </div>
+                <!-- telefone -->
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <label class="form-label">Telefone:</label>
+                    <input class="form-control" type="tel" placeholder="(00) 9 0000-0000"
+                        aria-label="default input example">
+                </div>
+                <!-- nivel de escolaridade -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <label class="form-label">Escolaridade:</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Selecione uma opção...</option>
+                        <option value="1">Ensino Fundamental Incompleto</option>
+                        <option value="2">Ensino Fundamental Completo</option>
+                        <option value="3">Ensino Médio Incompleto</option>
+                        <option value="4">Ensino Médio Completo</option>
+                        <option value="5">Ensino Superior Incompleto</option>
+                        <option value="6">Ensino Superior Completo</option>
+                        <option value="7">Pós-graduação</option>
+                        <option value="8">Mestrado</option>
+                        <option value="9">Doutorado</option>
+                    </select>
+                </div>
+                <!-- profissão -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <label class="form-label">Profissão:</label>
+                    <input class="form-control" type="text" placeholder="Cargo que ocupa atualmente"
+                        aria-label="default input example">
+                </div>
+                <!-- salário -->
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <label class="form-label">Salário (R$):</label>
+                    <input class="form-control" type="number" placeholder="Digite o seu salário mensal"
+                        aria-label="default input example" step="1000" min="0">
+                </div>
             </div>
+            <!-- fim da row -->
+
+            <h3 class="mt-5">Endereço</h3>
+            <hr>
+            <!-- row -->
+            <div class="row">
+                <!-- cep -->
+                <div class="col-12 col-md-4 col-lg-3 mb-3">
+                    <label class="form-label">CEP:</label>
+                    <input class="form-control" type="text" placeholder="00.000-00" aria-label="default input example">
+                </div>
+            
+                <!-- uf -->
+                <div class="col-12 col-md-2 col-lg-1 mb-3">
+                    <label class="form-label">UF:</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option value="1">AC</option>
+                        <option value="2">AL</option>
+                        <option value="3">AP</option>
+                        <option value="4">AM</option>
+                        <option value="5">BA</option>
+                        <option value="6">CE</option>
+                        <option value="7">DF</option>
+                        <option value="8">ES</option>
+                        <option value="9">GO</option>
+                        <option value="10">MA</option>
+                        <option value="11">MT</option>
+                        <option value="12">MS</option>
+                        <option value="13">MG</option>
+                        <option value="14">PA</option>
+                        <option value="15">PB</option>
+                        <option value="16">PR</option>
+                        <option value="17">PE</option>
+                        <option value="18">PI</option>
+                        <option value="19">RJ</option>
+                        <option value="20">RN</option>
+                        <option value="21">RS</option>
+                        <option value="22">RO</option>
+                        <option value="23">RR</option>
+                        <option value="24">SC</option>
+                        <option value="25">SP</option>
+                        <option value="26">SE</option>
+                        <option value="27">TO</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <label class="form-label">Cidade:</label>
+                    <input class="form-control" type="text" placeholder="Digite a cidade aonde você mora:" aria-label="default input label">
+                </div>
+            <!-- fim da row -->
         </form>
     </main>
 
