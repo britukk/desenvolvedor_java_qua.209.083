@@ -1,0 +1,30 @@
+.nav-espaço-logo {
+    margin-left: 1050px;
+}
+
+.nav-espaço {
+    margin-left: 20px;
+}
+
+.cor-sidebar {
+    background-color: #198754;
+    color: white;
+}
+
+.nav-cor {
+    background-color: #212529;
+}
+
+.nav-cast {
+    background-color: #dd1ac3;
+    font-weight: bold;
+}
+
+.cor_botao {
+    background-color: #198754;
+}
+
+.meu-logo {
+    width: 100px;
+    height: auto;
+}

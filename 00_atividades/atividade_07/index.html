@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouCast</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- meu css -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<!-- TODO: Atividade 07: -->
+<!-- 
+    Recrie a tela principal do app YouCast do filme Searching (buscando) 
+    -->
+
+<body>
+    <document>
+        <!-- modal centralizada
+        <div class="modal-dialog modal-dialog-centered" tabindex="-1">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Bem vindo de volta! @usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Entre agora para fazer streams com todos.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Nah</button>
+                    <button type="button" class="btn btn-primary">Join</button>
+                </div>
+            </div>
+        </div>
+        
+        fim da modal -->
+
+    </document>
+
+    <!-- menu superior (navbar) -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo-you-cast.png" alt="Ícone" class="meu-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation" onclick=""> <!-- TODO: Fazer o onclick para deixar o botao verde no navbar -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-espaço">
+                    <!-- home -->
+                    <li class="nav-item nav-espaço-logo">
+                        <a class="nav-link active" aria-current="page" href="#">STREAMING</a>
+                    </li>
+                    <!-- discover (procurar novas lives) -->
+                    <li class="nav-item nav-espaço">
+                        <a class="nav-link" href="#">DISCOVER</a>
+                    </li>
+                    <li class="nav-item nav-espaço nav-cast">
+                        <a class="nav-link" href="#">CAST NOW</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- fim do menu superior -->
+
+    
+
+    <!-- conteúdo da página -->
+    <main class="container">
+            <div class="row">
+        <!-- menu lateral (sidebar) -->
+        <aside class="col-md-2">
+            <div class="flex-shrink-0 p-3 bg-white" style="width: 200px;">
+                <ul class="list-unstyled ps-0">
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed cor-sidebar" data-bs-toggle="collapse"
+                            data-bs-target="#home-collapse" aria-expanded="true">
+                            Trending Casters
+                        </button>
+                        <div class="collapse show" id="home-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark rounded">Math645</a></li>
+                                <li><a href="#" class="link-dark rounded">JayJay</a></li>
+                                <li><a href="#" class="link-dark rounded">Lambda2000</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed cor-sidebar" data-bs-toggle="collapse"
+                            data-bs-target="#dashboard-collapse" aria-expanded="false">
+                            Hashtags
+                        </button>
+                        <div class="collapse" id="dashboard-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark rounded">#Trending</a></li>
+                                <li><a href="#" class="link-dark rounded">#WeeklyMost</a></li>
+                                <li><a href="#" class="link-dark rounded">#Cool</a></li>
+                                <li><a href="#" class="link-dark rounded">#GoTo4You</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed cor-sidebar" data-bs-toggle="collapse"
+                            data-bs-target="#account-collapse" aria-expanded="false">
+                            Locations
+                        </button>
+                        <div class="collapse" id="account-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark rounded">#Florida</a></li>
+                                <li><a href="#" class="link-dark rounded">#New York</a></li>
+                                <li><a href="#" class="link-dark rounded">#Canada</a></li>
+                                <li><a href="#" class="link-dark rounded">#Ohio</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed cor-sidebar" data-bs-toggle="collapse"
+                            data-bs-target="#orders-collapse" aria-expanded="false">
+                            Just For You
+                        </button>
+                        <div class="collapse" id="orders-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark rounded">ABC</a></li>
+                                <li><a href="#" class="link-dark rounded">DEF</a></li>
+                                <li><a href="#" class="link-dark rounded">HIJ</a></li>
+                                <li><a href="#" class="link-dark rounded">KLM</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <!-- fim da sidebar -->
+
+        <!-- imagens das lives -->
+        <div class="col-md-10">
+            <div class="row">
+                <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                    <img src="img/pessoalive1.jpg" alt="live1" class="img-fluid">
+                </figure>
+                <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                    <img src="img/pessoalive2.jpg" alt="live2" class="img-fluid">
+                </figure>
+                <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                    <img src="img/pessoalive3.jpg" alt="live3" class="img-fluid">
+                </figure>
+                <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                    <img src="img/pessoalive4.jpg" alt="live4" class="img-fluid">
+                </figure>
+                <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                    <img src="img/pessoalive5.jpg" alt="live5" class="img-fluid">
+                </figure>
+                <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                    <img src="img/pessoalive6.jpg" alt="live6" class="img-fluid">
+                </figure>
+                <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                    <img src="img/pessoalive7.jpg" alt="live7" class="img-fluid">
+                </figure>
+                <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                    <img src="img/pessoalive8.jpg" alt="live8" class="img-fluid">
+                </figure>
+                <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                    <img src="img/pessoalive9.jpg" alt="live9" class="img-fluid">
+                </figure>
+                <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                    <img src="img/pessoalive10.jpg" alt="live10" class="img-fluid">
+                </figure>
+                <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                    <img src="img/pessoalive11.jpg" alt="live11" class="img-fluid">
+                </figure>
+                <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                    <img src="img/pessoalive12.jpg" alt="live12" class="img-fluid">
+                </figure>
+            </div>
+        </div>
+        <!-- fim das imagens -->
+
+    </main>
+    
+
+</body>
+
+</html>
