@@ -1,14 +1,37 @@
 .nav-espaço-logo {
-    margin-left: 1050px;
+    margin-left: 855px;
 }
 
 .nav-espaço {
     margin-left: 20px;
+    height: 40px;
 }
 
-.cor-sidebar {
+.nav-foto-perfil {
+    width: 80px;
+    height: auto;
+    margin-top: -10px;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.cor-botao {
     background-color: #198754;
     color: white;
+}
+
+.rounded-0 {
+  border-radius: 0;
+  border-width: 0px;
+}
+
+.rounded-circle {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 10px;
 }
 
 .nav-cor {
@@ -18,13 +41,24 @@
 .nav-cast {
     background-color: #dd1ac3;
     font-weight: bold;
+    font-style: italic;
 }
 
-.cor_botao {
-    background-color: #198754;
+.cor-navbar {
+    border-bottom: 4px solid #198754;
 }
 
 .meu-logo {
-    width: 100px;
-    height: auto;
+    width: 160px;
+    height: alto;
+    margin-left: 40px;
+}
+
+.espaco-lateral {
+    margin-left: -90px;
+    margin-top: 10px;
+}
+
+.tamanho-div {
+    height: 80px;
 }
