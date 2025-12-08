@@ -20,12 +20,14 @@
     -->
 
 <body>
-    <document>
-        <!-- modal centralizada
-        <div class="modal-dialog modal-dialog-centered" tabindex="-1">
+
+    <!-- modal -->
+
+    <div class="modal fade" id="minhaModalExemplo" tabindex="-1" aria-labelledby="minhaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Bem vindo de volta! @usuario</h5>
+                    <h5 class="modal-title" id="minhaModalLabel">Bem vindo de volta! @usuario</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -37,10 +39,11 @@
                 </div>
             </div>
         </div>
-        
-        fim da modal -->
+    </div>
 
-    </document>
+
+
+    <!-- fim da modal -->
 
     <!-- menu superior (navbar) -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
@@ -50,7 +53,8 @@
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation" onclick=""> <!-- TODO: Fazer o onclick para deixar o botao verde no navbar -->
+                aria-label="Toggle navigation" onclick="">
+                <!-- TODO: Fazer o onclick para deixar o botao verde no navbar -->
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -77,145 +81,168 @@
     </nav>
     <!-- fim do menu superior -->
 
-    
+
 
     <!-- conteúdo da página -->
     <main class="container">
-            <div class="row">
-        <!-- menu lateral (sidebar) -->
-        <aside class="col-md-2">
-            <div class="flex-shrink-0 p-3 bg-white" style="width: 200px;">
-                <ul class="list-unstyled ps-0 espaco-lateral">
-                    <li class="mb-1">
-                        <button class="btn btn-toggle align-items-center rounded collapsed cor-botao rounded-0 mb-2" data-bs-toggle="collapse"
-                            data-bs-target="#home-collapse" aria-expanded="true">
-                            Trending Casters
-                        </button>
-                        <div class="collapse show" id="home-collapse">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li>
-                                    <img src="img/pessoa-circular1.jpg" alt="teste foto" class="img-fluid rounded-circle mb-1">
-                                    <a href="#" class="link-dark rounded">Math645</a>
-                                </li>
-                                <li>
-                                    <img src="img/pessoa-circular2.jpg" alt="teste foto" class="img-fluid rounded-circle mb-1">
-                                    <a href="#" class="link-dark rounded">JayJay</a>
-                                </li>
-                                <li>
-                                    <img src="img/pessoa-circular3.jpg" alt="teste foto" class="img-fluid rounded-circle mb-1">
-                                    <a href="#" class="link-dark rounded">Lambda2000</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="mb-1">
-                        <button class="btn btn-toggle align-items-center rounded collapsed cor-botao  rounded-0" data-bs-toggle="collapse"
-                            data-bs-target="#dashboard-collapse" aria-expanded="false">
-                            Hashtags
-                        </button>
-                        <div class="collapse show" id="dashboard-collapse">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-dark rounded">#trending</a></li>
-                                <li><a href="#" class="link-dark rounded">#weeklymost</a></li>
-                                <li><a href="#" class="link-dark rounded">#cool</a></li>
-                                <li><a href="#" class="link-dark rounded">#goto4you</a></li>
-                                <li><a href="#" class="link-dark rounded">#gaming</a></li>
-                                <li><a href="#" class="link-dark rounded">#random</a></li>
-                                <li><a href="#" class="link-dark rounded">#singing</a></li>
-                                <li><a href="#" class="link-dark rounded">#bored</a></li>
-                                <li><a href="#" class="link-dark rounded">#girls</a></li>
-                                <li><a href="#" class="link-dark rounded">#dance</a></li>
-                                <li><a href="#" class="link-dark rounded">#musician</a></li>
-                            </ul>
-                        </div>
-                    </li>
+        <div class="row">
+            <!-- menu lateral (sidebar) -->
+            <aside class="col-md-2">
+                <div class="flex-shrink-0 p-3 bg-white" style="width: 200px;">
+                    <ul class="list-unstyled ps-0 espaco-lateral">
+                        <li class="mb-1">
+                            <button class="btn btn-toggle align-items-center rounded collapsed cor-botao rounded-0 mb-2"
+                                data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                                Trending Casters
+                            </button>
+                            <div class="collapse show" id="home-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li>
+                                        <img src="img/pessoa-circular1.jpg" alt="teste foto"
+                                            class="img-fluid rounded-circle mb-1">
+                                        <a href="#" class="link-dark rounded">Math645</a>
+                                    </li>
+                                    <li>
+                                        <img src="img/pessoa-circular2.jpg" alt="teste foto"
+                                            class="img-fluid rounded-circle mb-1">
+                                        <a href="#" class="link-dark rounded">JayJay</a>
+                                    </li>
+                                    <li>
+                                        <img src="img/pessoa-circular3.jpg" alt="teste foto"
+                                            class="img-fluid rounded-circle mb-1">
+                                        <a href="#" class="link-dark rounded">Lambda2000</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn btn-toggle align-items-center rounded collapsed cor-botao  rounded-0"
+                                data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                                Hashtags
+                            </button>
+                            <div class="collapse show" id="dashboard-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded">#trending</a></li>
+                                    <li><a href="#" class="link-dark rounded">#weeklymost</a></li>
+                                    <li><a href="#" class="link-dark rounded">#cool</a></li>
+                                    <li><a href="#" class="link-dark rounded">#goto4you</a></li>
+                                    <li><a href="#" class="link-dark rounded">#gaming</a></li>
+                                    <li><a href="#" class="link-dark rounded">#random</a></li>
+                                    <li><a href="#" class="link-dark rounded">#singing</a></li>
+                                    <li><a href="#" class="link-dark rounded">#bored</a></li>
+                                    <li><a href="#" class="link-dark rounded">#girls</a></li>
+                                    <li><a href="#" class="link-dark rounded">#dance</a></li>
+                                    <li><a href="#" class="link-dark rounded">#musician</a></li>
+                                </ul>
+                            </div>
+                        </li>
 
-                    <li class="mb-1">
-                        <button class="btn btn-toggle align-items-center rounded collapsed cor-botao  rounded-0" data-bs-toggle="collapse"
-                            data-bs-target="#account-collapse" aria-expanded="false">
-                            Locations
-                        </button>
-                        <div class="collapse show" id="account-collapse">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-dark rounded">#Florida</a></li>
-                                <li><a href="#" class="link-dark rounded">#New York</a></li>
-                                <li><a href="#" class="link-dark rounded">#Canada</a></li>
-                                <li><a href="#" class="link-dark rounded">#Ohio</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                        <li class="mb-1">
+                            <button class="btn btn-toggle align-items-center rounded collapsed cor-botao  rounded-0"
+                                data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                                Locations
+                            </button>
+                            <div class="collapse show" id="account-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded">#Florida</a></li>
+                                    <li><a href="#" class="link-dark rounded">#New York</a></li>
+                                    <li><a href="#" class="link-dark rounded">#Canada</a></li>
+                                    <li><a href="#" class="link-dark rounded">#Ohio</a></li>
+                                </ul>
+                            </div>
+                        </li>
 
-                    <li class="mb-1">
-                        <button class="btn btn-toggle align-items-center rounded collapsed cor-botao  rounded-0" data-bs-toggle="collapse"
-                            data-bs-target="#orders-collapse" aria-expanded="false">
-                            Just For You
-                        </button>
-                        <div class="collapse show" id="orders-collapse">
-                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                <li><a href="#" class="link-dark rounded">#ImMyrys</a></li>
-                                <li><a href="#" class="link-dark rounded">#NBALeague</a></li>
-                                <li><a href="#" class="link-dark rounded">#The SupaLeague</a></li>
-                                <li><a href="#" class="link-dark rounded">#OverwatchGame</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
+                        <li class="mb-1">
+                            <button class="btn btn-toggle align-items-center rounded collapsed cor-botao  rounded-0"
+                                data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                                Just For You
+                            </button>
+                            <div class="collapse show" id="orders-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded">#ImMyrys</a></li>
+                                    <li><a href="#" class="link-dark rounded">#NBALeague</a></li>
+                                    <li><a href="#" class="link-dark rounded">#The SupaLeague</a></li>
+                                    <li><a href="#" class="link-dark rounded">#OverwatchGame</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <!-- fim da sidebar -->
+
+            <!-- imagens das lives -->
+            <div class="col-md-10">
+                <div class="row">
+                    <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                        <img src="img/pessoalive1.jpg" alt="live1" class="img-fluid">PlatPlus 👁️14
+                    </figure>
+                    <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                        <img src="img/pessoalive2.jpg" alt="live2" class="img-fluid">B.B King 👁️23
+                    </figure>
+                    <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                        <img src="img/pessoalive3.jpg" alt="live3" class="img-fluid">Pretty Hanna 👁️89
+                    </figure>
+                    <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                        <img src="img/pessoalive4.jpg" alt="live4" class="img-fluid">StudyWithMe 👁️102
+                    </figure>
+                    <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                        <img src="img/pessoalive5.jpg" alt="live5" class="img-fluid">The SupaLeague 👁️160
+                    </figure>
+                    <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                        <img src="img/pessoalive6.jpg" alt="live6" class="img-fluid">Trevis 👁️23
+                    </figure>
+                    <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                        <img src="img/pessoalive7.jpg" alt="live7" class="img-fluid">Need 2 Break 👁️48
+                    </figure>
+                    <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                        <img src="img/pessoalive8.jpg" alt="live8" class="img-fluid">Liroinka 👁️12
+                    </figure>
+                    <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                        <img src="img/pessoalive9.jpg" alt="live9" class="img-fluid">Teacher Boula 👁️74
+                    </figure>
+                    <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                        <img src="img/pessoalive10.jpg" alt="live10" class="img-fluid">Im Myrys 👁️200
+                    </figure>
+                    <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                        <img src="img/pessoalive11.jpg" alt="live11" class="img-fluid">Peir 👁️32
+                    </figure>
+                    <figure class="col-12 col-md-6 col-lg-3 mt-3">
+                        <img src="img/pessoalive12.jpg" alt="live12" class="img-fluid">Platinum Guy 👁️51
+                    </figure>
+                </div>
             </div>
-        </aside>
-        <!-- fim da sidebar -->
+            <!-- fim das imagens -->
 
-        <!-- imagens das lives -->
-        <div class="col-md-10">
-            <div class="row">
-                <figure class="col-12 col-md-6 col-lg-3 mt-3">
-                    <img src="img/pessoalive1.jpg" alt="live1" class="img-fluid">PlatPlus 👁️14
-                </figure>
-                <figure class="col-12 col-md-6 col-lg-3 mt-3">
-                    <img src="img/pessoalive2.jpg" alt="live2" class="img-fluid">B.B King 👁️23
-                </figure>
-                <figure class="col-12 col-md-6 col-lg-3 mt-3">
-                    <img src="img/pessoalive3.jpg" alt="live3" class="img-fluid">Pretty Hanna 👁️89
-                </figure>
-                <figure class="col-12 col-md-6 col-lg-3 mt-3">
-                    <img src="img/pessoalive4.jpg" alt="live4" class="img-fluid">StudyWithMe 👁️102
-                </figure>
-                <figure class="col-12 col-md-6 col-lg-3 mt-3">
-                    <img src="img/pessoalive5.jpg" alt="live5" class="img-fluid">The SupaLeague 👁️160
-                </figure>
-                <figure class="col-12 col-md-6 col-lg-3 mt-3">
-                    <img src="img/pessoalive6.jpg" alt="live6" class="img-fluid">Trevis 👁️23
-                </figure>
-                <figure class="col-12 col-md-6 col-lg-3 mt-3">
-                    <img src="img/pessoalive7.jpg" alt="live7" class="img-fluid">Need 2 Break 👁️48
-                </figure>
-                <figure class="col-12 col-md-6 col-lg-3 mt-3">
-                    <img src="img/pessoalive8.jpg" alt="live8" class="img-fluid">Liroinka 👁️12
-                </figure>
-                <figure class="col-12 col-md-6 col-lg-3 mt-3">
-                    <img src="img/pessoalive9.jpg" alt="live9" class="img-fluid">Teacher Boula 👁️74
-                </figure>
-                <figure class="col-12 col-md-6 col-lg-3 mt-3">
-                    <img src="img/pessoalive10.jpg" alt="live10" class="img-fluid">Im Myrys 👁️200
-                </figure>
-                <figure class="col-12 col-md-6 col-lg-3 mt-3">
-                    <img src="img/pessoalive11.jpg" alt="live11" class="img-fluid">Peir 👁️32
-                </figure>
-                <figure class="col-12 col-md-6 col-lg-3 mt-3">
-                    <img src="img/pessoalive12.jpg" alt="live12" class="img-fluid">Platinum Guy 👁️51
-                </figure>
-            </div>
         </div>
-        <!-- fim das imagens -->
-
     </main>
 
     <!-- footer -->
-    
-    <div class="container"> <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"> <div class="col-md-4 d-flex align-items-center"> <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap"> <svg class="bi" width="30" height="24" aria-hidden="true"><use xlink:href="#bootstrap"></use></svg> </a> <span class="mb-3 mb-md-0 text-body-secondary">YouCast© 2025 Company, Inc</span> </div> <ul class="nav col-md-4 justify-content-end list-unstyled d-flex"> <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Instagram"><svg class="bi" width="24" height="24" aria-hidden="true"><use xlink:href="#instagram"></use></svg></a></li> <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Facebook"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li> </ul> </footer> </div>
+
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center"> <a href="/"
+                    class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap"> <svg
+                        class="bi" width="30" height="24" aria-hidden="true">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg> </a> <span class="mb-3 mb-md-0 text-body-secondary">YouCast© 2025 Company, Inc</span> </div>
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Instagram"><svg class="bi"
+                            width="24" height="24" aria-hidden="true">
+                            <use xlink:href="#instagram"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Facebook"><svg class="bi"
+                            width="24" height="24">
+                            <use xlink:href="#facebook"></use>
+                        </svg></a></li>
+            </ul>
+        </footer>
+    </div>
 
     <!-- fim do footer -->
-    
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="modal.js"></script>
 </body>
 
 </html>
