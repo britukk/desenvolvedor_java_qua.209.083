@@ -1,0 +1,1 @@
+a static salva todos os arquivos que não sejam HTML, ou seja, CSS, JavaScript, imagens, vídeos, sons, e todo o resto que você precise no front

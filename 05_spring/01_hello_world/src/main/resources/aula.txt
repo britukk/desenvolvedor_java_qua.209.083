@@ -1,0 +1,1 @@
+resorces é a view no modelo MVC do nosso projeto, tudo que se refere ao front-end da nossa aplicação 
