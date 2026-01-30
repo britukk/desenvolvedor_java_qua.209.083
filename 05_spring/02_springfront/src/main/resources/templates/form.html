@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulário com Spring</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header th:replace="fragments/header :: navbar"></header>
+
+    <!-- formulário -->
+
+    <main class="container">
+    <h1>Formulário com Spring</h1>
+    <h3 class="mt-5">Cadastro do Formulário</h3>
+    <hr>
+
+        <form class="mt-5">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <label>Nome:</label><br>
+            <input type="text" maxlength="50" placeholder="Digite o seu nome" required><br><br>
+            </div>
+            
+            <div class="col-12 col-md-6 mb-3">
+            <label>E-mail:</label>
+            <input type="email" placeholder="Digite o seu e-mail" required><br><br>
+            </div>
+
+            <div class="col-12 col-md-3 mb-3">
+            <label>Data de Nascimento:</label><br>
+            <input type="date"><br><br>
+            </div>
+
+            <div class="col-12 col-md-3 mb-3">
+            <label>Gênero:</label>
+            <select>
+                <option>
+                    Escolha uma opção...
+                </option>
+                <option>Masculino</option>
+                <option>Feminino</option>
+                <option>Outro</option>
+            </select><br><br>
+            </div>
+
+            <div class="col-12 col-md-3 mb-3">
+            <label>Peso:</label>
+            <input type="number"><br><br>
+            </div>
+
+            <div class="col-12 col-md-3 mb-3">
+            <label>Altura:</label>
+            <input type="number" step="1.7"><br><br>
+            </div>
+
+            <div class="col-12 col-md-6 mb-3">
+            <label>Telefone:</label>
+            <input type="tel" placeholder="(00)9 0000-0000"><br><br>
+            </div>
+
+        </div>
+        </form>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

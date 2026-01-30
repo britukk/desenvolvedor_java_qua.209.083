@@ -11,5 +11,9 @@ public class SpringFrontController {
         return "index";
     }
 
+    @RequestMapping("/formulario")
+    public String formulario() {
+        return "form";
+    }
 
 }
