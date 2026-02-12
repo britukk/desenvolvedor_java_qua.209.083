@@ -1,4 +1,4 @@
-package com.login.app;
+package main.java.com.login.app;
 
 import javax.sql.DataSource;
 

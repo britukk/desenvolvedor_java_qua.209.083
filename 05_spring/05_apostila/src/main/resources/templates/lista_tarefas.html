@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <h1>Minhas tarefas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="tarefa: ${listaTarefas}">
+                <td th:text="${tarefa.descricao}">Descrição da Tarefa</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <a href="/logout">Sair do Programa</a>
+    
+</body>
+</html>

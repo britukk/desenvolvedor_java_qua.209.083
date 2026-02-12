@@ -1,4 +1,4 @@
-package com.login.app.models;
+package main.java.com.login.app.models;
 
 import java.io.Serializable;
 

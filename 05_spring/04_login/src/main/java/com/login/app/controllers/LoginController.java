@@ -1,4 +1,4 @@
-import packge com.login.app.controllers;
+package main.java.com.login.app.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
