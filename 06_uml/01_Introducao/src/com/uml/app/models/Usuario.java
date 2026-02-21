@@ -4,7 +4,7 @@ public class Usuario {
 
     private long idUsuario;
     private String nome;
-    private int dataNascimento;
+    private LocalDate dataNascimento;
     private String email;
     private String login;
     private String senha;
@@ -28,11 +28,11 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public int getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return this.dataNascimento;
     }
 
-    public void setDataNascimento(int dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
@@ -63,7 +63,9 @@ public class Usuario {
     // métodos
 
     public String fazerLogin (String login, String senha) {
-        return login;
+
+        System.out.println("Você efetuou seu login com sucesso!");
+        
     }
 
     public static void fazerLogoff(){
